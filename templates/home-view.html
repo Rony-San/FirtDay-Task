@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<h2>Write the URLs to check</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <textarea name="urls" rows="10" cols="50"></textarea>
+  <br />
+  <button type="submit">Check URLs</button>
+</form>
+{% endblock content %}

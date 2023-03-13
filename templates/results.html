@@ -1,0 +1,20 @@
+<h2>HINDI CHECK</h1>
+<p style="color: blue;">
+  Translation: The URLs will produce "fail" if they don't exist or the Hindi
+  text is produced by a script.
+</p>    
+{% for url, result in results.items %}
+<p>{{ url }}: {{ result.status }}</p>
+<ul>
+  {% for inner_result in result.inner_results %}
+  <li>{{ inner_result.status }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+ <h2>URL Check</h2>
+  <ul>
+    {% for result in results %}
+      <li>{{ result }}</li>
+    {% endfor %}
+  </ul>
